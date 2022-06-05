@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2022/06/05/《kafka环境配置》/"/>
+  <link rel="canonical" href="http://example.com/2022/06/05/《kafka命令行操作》/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,21 +31,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>《Kafka环境配置》 - Hexo</title>
-  <meta name="keywords" content="《Kafka环境配置》,null">
+  <title>《Kafka命令行操作》 - Hexo</title>
+  <meta name="keywords" content="《Kafka命令行操作》,null">
   <meta desc name="description" content="Young fearless,long years,can be wanton high - John Doe - Hexo">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="《Kafka环境配置》">
-<meta property="og:url" content="http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/index.html">
+<meta property="og:title" content="《Kafka命令行操作》">
+<meta property="og:url" content="http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、Kafka环境配置 上传安装包（移动到指定文件夹&#x2F;export&#x2F;servers）  mv kafka_2.11-2.0.0.tgz &#x2F;export&#x2F;servers  解压  tar -zxvf kafka_2.11-2.0.0.tgz  创建软连接  ln -s kafka_2.11-2.0.0&#x2F; kafka  修改配置文件 server.pr">
+<meta property="og:description" content="一、Kafka命令行操作Kafka 中提供了许多命令行工具用于管理集群的变更。    kafka-configs.sh 用于配置管理    kafka-console-consumer.sh 用于消费消息   kafka-console-producer.sh 用于生产消息   kafka-consumer-perf-test.sh 用于测试消费性能   kafka-topics.sh 用于管理主">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-06-05T06:02:41.000Z">
-<meta property="article:modified_time" content="2022-06-05T07:22:39.471Z">
+<meta property="article:published_time" content="2022-06-05T07:29:28.000Z">
+<meta property="article:modified_time" content="2022-06-05T07:51:04.978Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="《Kafka环境配置》">
+<meta property="article:tag" content="《Kafka命令行操作》">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2493,7 +2493,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2514,7 +2514,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        《Kafka环境配置》
+        《Kafka命令行操作》
       </h1>
       <div class='new-meta-box'>
         
@@ -2535,7 +2535,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-05T14:02:41+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-05T15:29:28+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2022年6月5日</p>
@@ -2571,88 +2571,113 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="一、Kafka环境配置"><a href="#一、Kafka环境配置" class="headerlink" title="一、Kafka环境配置"></a>一、Kafka环境配置</h1><ol>
-<li>上传安装包（移动到指定文件夹&#x2F;export&#x2F;servers）</li>
-</ol>
-<p>mv kafka_2.11-2.0.0.tgz &#x2F;export&#x2F;servers</p>
-<ol start="2">
-<li>解压</li>
-</ol>
-<p>tar -zxvf kafka_2.11-2.0.0.tgz</p>
-<ol start="3">
-<li>创建软连接</li>
-</ol>
-<p>ln -s kafka_2.11-2.0.0&#x2F; kafka</p>
-<ol start="4">
-<li>修改配置文件 server.properties</li>
-</ol>
-<p>vi &#x2F;export&#x2F;servers&#x2F;kafka&#x2F;config&#x2F;server.properties</p>
-<p>​    修改内容如下：</p>
-<p>#listeners&#x3D;PLAINTEXT:&#x2F;&#x2F;:9092 取消注释，内容改为：</p>
-<p>listeners&#x3D;PLAINTEXT:&#x2F;&#x2F;master:9092</p>
-<p>PLAINTEXT为通信使用明文（加密ssl）</p>
-<p><img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps1.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps1"></p>
-<p> log.dirs&#x3D;&#x2F;tmp&#x2F;kafka-logs 为默认日志文件存储的位置改为log.dirs&#x3D;&#x2F;export&#x2F;server&#x2F;data&#x2F;kafka-logs</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps2.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps2"></p>
-<p> #数据安全性（持久化之前先放到缓存上，从缓存刷到磁盘上）</p>
-<p>interval.messages interval.ms</p>
-<p>168&#x2F;24&#x3D;7，1073741824&#x2F;1024&#x3D;1GB    #数据保留策略</p>
-<p>300000ms &#x3D; 300s &#x3D; 5min     #超过了删掉</p>
-<p>（最后修改时间还是创建时间–&gt;日志段中最晚的一条消息，维护这个最大的时间戳–&gt;用户无法 干预）</p>
-<p>#指定zookeeper集群地址</p>
-<p>zookeeper.connect&#x3D;localhost:2181 修改为</p>
-<p>zookeeper.connect&#x3D;master:2181,slave1:2181,slave2:2181</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps3.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps3"></p>
-<p> group.initial.rebalance.delay.ms&#x3D;0 修改group.initial.rebalance.delay.ms&#x3D;3000</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps4.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps4"></p>
-<ol start="5">
-<li>分发kafka</li>
-</ol>
-<p>给 node2和 node3分发 kafka</p>
-<p>cd &#x2F;export&#x2F;server&#x2F; </p>
-<p>scp -r &#x2F;export&#x2F;server&#x2F;kafka_2.11-2.0.0&#x2F; node2:$PWD </p>
-<p>scp -r &#x2F;export&#x2F;server&#x2F;kafka_2.11-2.0.0&#x2F; node3:$PWD </p>
-<ol start="6">
-<li>为node2，node3创建软连接</li>
-</ol>
-<p>ln -s &#x2F;export&#x2F;server&#x2F;kafka_2.11-2.0.0&#x2F; kafka</p>
-<p>   7.配置node2 ，node3的环境变量</p>
-<p>vim &#x2F;etc&#x2F;profile </p>
-<p><img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps5.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps5"></p>
-<p>   8.重新加载环境变量</p>
-<p>source &#x2F;etc&#x2F;profile</p>
-<ol start="9">
-<li>分别在node2 和node3 上修改配置文件</li>
-</ol>
-<p>路径：&#x2F;export&#x2F;server&#x2F;kafka&#x2F;config</p>
-<p>将文件 server.properties的broker.id&#x3D;0修改为broker.id&#x3D;1</p>
-<p>Node2</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps6.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps6"></p>
-<p>Node3</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps7.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps7"></p>
-<ol start="10">
-<li>Node2，node3修改配置文件</li>
-</ol>
-<p>文件server.properties：</p>
-<p>listeners&#x3D;PLAINTEXT:&#x2F;&#x2F;master:9092修改listeners&#x3D;PLAINTEXT:&#x2F;&#x2F;node2:9092 </p>
-<p>同理node3 同样操作</p>
+    <h1 id="一、Kafka命令行操作"><a href="#一、Kafka命令行操作" class="headerlink" title="一、Kafka命令行操作"></a>一、Kafka命令行操作</h1><p>Kafka 中提供了许多命令行工具用于管理集群的变更。</p>
+<table>
+<thead>
+<tr>
+<th>kafka-configs.sh</th>
+<th>用于配置管理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>kafka-console-consumer.sh</td>
+<td>用于消费消息</td>
+</tr>
+<tr>
+<td>kafka-console-producer.sh</td>
+<td>用于生产消息</td>
+</tr>
+<tr>
+<td>kafka-consumer-perf-test.sh</td>
+<td>用于测试消费性能</td>
+</tr>
+<tr>
+<td>kafka-topics.sh</td>
+<td>用于管理主题</td>
+</tr>
+<tr>
+<td>kafka-dump-log.sh</td>
+<td>用于查看日志内容</td>
+</tr>
+<tr>
+<td>kafka-server-stop.sh</td>
+<td>用于关闭Kafka 服务</td>
+</tr>
+<tr>
+<td>kafka-preferred-replica-election.sh</td>
+<td>用于优先副本的选举</td>
+</tr>
+<tr>
+<td>kafka-server-start.sh</td>
+<td>用于启动Kafka服务</td>
+</tr>
+<tr>
+<td>kafka-producer-perf-test.sh</td>
+<td>用于测试生产性能</td>
+</tr>
+<tr>
+<td>kafka-reassign-partitions.sh</td>
+<td>查看帮助</td>
+</tr>
+</tbody></table>
+<p>1、查看topic</p>
+<p>kafka-topic.sh –list –zookeeper node1:2181 __consumer_offsets</p>
+<p>2、创建topic</p>
+<p>（1）.不指定分区创建topic</p>
+<p>.&#x2F;kafka-topics.sh –zookeeper node1:2181,node2:2181,node3:2181 –create –replication-factor 3 –partitions 3 –topic test</p>
+<p> <img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps12.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps12.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps12"></p>
+<p>（2）手动指定副本的存储位置</p>
+<p>bin&#x2F;kafka-topics.sh –create –topic tpc_1 –zookeeper node1:2181 –replica-assignment 0:1,1:2</p>
+<p>注：该方式下,命令会自动判断所要创建的 topic 的分区数及副本数</p>
+<p>进入cd &#x2F;export&#x2F;data&#x2F;kafka-logs路径下查看分区的分布</p>
+<p><img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps13.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps13.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps13"></p>
+<p>node1</p>
+<p><img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps14.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps14.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps14"></p>
 <p>node2</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps8.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps8"></p>
+<p><img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps15.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps15.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps15"></p>
 <p>node3</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps9.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps9.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps9"></p>
-<ol start="11">
-<li>启停kafka</li>
-</ol>
-<p>(注：kafka 启动需要在 zookeeper 启动的情况下才可) </p>
-<p>kafka-server-start.sh -daemon &#x2F;export&#x2F;</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps10.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps10.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps10"></p>
-<ol start="12">
-<li>关闭 kafka</li>
-</ol>
-<p>kafka-server-stop.sh stop</p>
-<p>​        13.定制脚本一键启动</p>
-<p>vim kafka-all.sh 放入 &#x2F;bin 路径下</p>
-<p> <img src="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps11.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/wps11.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps11"></p>
+<p><img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps16.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps16.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps16"></p>
+<p>–replication-factor  #副本数量</p>
+<p>–partitions  #分区数量</p>
+<p>–topic    #topic 名称</p>
+<p>3、删除 topic</p>
+<p>bin&#x2F;kafka-topics.sh  –delete –topic tpc_6 –zookeeper node1：2181</p>
+<p>（异步线程去删除）删除 topic,需要一个参数处于启用状态: delete.topic.enable &#x3D; true,否则删不掉。</p>
+<p> <img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps17.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps17.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps17"></p>
+<p>使用 kafka-topics .sh 脚本删除主题的行为本质上只是在 ZooKeeper 中的 &#x2F;admin&#x2F;delete_topics 路径下 建一个与待删除主题同名的节点,以标记该主题为待删除的状态。与创建主题相同的是,真正删除主题的动作也是由 Kafka 的控制器负责完成的。</p>
+<p>4、查看 topic</p>
+<p>（1）列出当前系统中的所有 topic </p>
+<p>bin&#x2F;kafka-topics.sh –zookeeper node1:2181,node2:2181,node3:2181 –list</p>
+<p> <img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps18.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps18.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps18"></p>
+<p>（2）查看 topic 详细信息</p>
+<p>bin&#x2F;kafka-topics.sh –create –topic tpc_1  –zookeeper node1:2181 –replica-assignment 0:1,1:2</p>
+<p>bin&#x2F;kafka-topics.sh –describe –topic tpc_1 –zookeper node1:2181 </p>
+<p> <img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps19.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps19.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps19"></p>
+<p>可以看到topic 的分区数量, 以及每个分区的副本数量, 以及每个副本所在的 broker 节点,以及每个分区的 leader 副本所在 broker 节点,以及每个分区的 ISR 副本列表; </p>
+<p>ISR: in sync replicas   #同步副本(当然也包含 leader 自身) </p>
+<p>OSR:out of sync replicas  #失去同步的副本(数据与 leader 之间的差距超过配置的阈值)</p>
+<p>5、增加分区数</p>
+<p>Kafka 只支持增加分区,不支持减少分区，原因是减少分区,代价太大(数据的转移,日志段拼接合并)</p>
+<p>bin&#x2F;kafka-topics.sh –alter –topic tpc_1 –partitions 3 –zookeeper node1:2181</p>
+<p> <img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps20.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps20.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps20"></p>
+<p>6、动态配置 topic 参数</p>
+<p>通过管理命令,可以为已创建的 topic 增加、修改、删除 topic level 参数。</p>
+<p>（1）添加、修改配置参数</p>
+<p>（开启压缩发送传输种提高kafka消息吞吐量的有效办法(‘gzip’, ‘snappy’, ‘lz4’, ‘zstd’)）</p>
+<p>bin&#x2F;kafka-configs.sh –zookeeper node1:2181 –entity-type topics –entity-name tpc_1 –alter –add-config compression.type&#x3D;gzip</p>
+<p>（2）删除配置参数</p>
+<p>bin&#x2F;kafka-configs.sh –zookeeper node1:2181 –entity-type topics –entity-name tpc_1 –alter –delete-config compression.type</p>
+<p><img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps21.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps21.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps21"></p>
+<p>7、生产者写入数据、消费者拉取数据</p>
+<p>（1）生产者：kafka-console-producer</p>
+<p>bin&#x2F;kafka-console-producer.sh –broker-list node1:9092, node2:9092, node3:9092 –topic tpc_1  </p>
+<p> <img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps22.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps22.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps22"></p>
+<p>（2）消费者：kafka-console-producer</p>
+<p>#从头开始</p>
+<p>bin&#x2F;kafka-console-consumer.sh –bootstrap-server node1:9092, node2:9092, node1:9092 –topic tpc_1 –from-beginning</p>
+<p># 指定要消费的分区,和要消费的起始 offset </p>
+<p>bin&#x2F;kafka-console-consumer.sh –bootstrap-server node1:9092,node2:9092,node3:9092 –topic tcp_1 –offset 2 –partition 0</p>
+<p> <img src="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps23.jpg" class="lazyload" data-srcset="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/wps23.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="wps23"></p>
 
 
   </div>
@@ -2672,7 +2697,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/>http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/</a></p>
+                <p>本文永久链接是：<a href=http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/>http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/</a></p>
               
             
           </blockquote>
@@ -2689,7 +2714,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-05T15:22:39+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-05T15:51:04+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月5日</p>
@@ -2701,8 +2726,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>《Kafka环境配置》</p></a></div>
-  <span hidden itemprop="keywords">《Kafka环境配置》</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>《Kafka命令行操作》</p></a></div>
+  <span hidden itemprop="keywords">《Kafka命令行操作》</span>
 
 
         
@@ -2715,7 +2740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/&title=《Kafka环境配置》 - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/&title=《Kafka命令行操作》 - Hexo&summary="
           
           >
           
@@ -2727,7 +2752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/&title=《Kafka环境配置》 - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/&title=《Kafka命令行操作》 - Hexo&summary="
           
           >
           
@@ -2739,7 +2764,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/&title=《Kafka环境配置》 - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/&title=《Kafka命令行操作》 - Hexo&summary="
           
           >
           
@@ -2772,26 +2797,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>《Kafka命令行操作》</p>
-          <p class='content'>一、Kafka命令行操作Kafka 中提供了许多命令行工具用于管理集群的变更。
-
-
-
-kafka-configs.sh
-用于配置管理
-
-
-
-kafka-console-consumer.sh
-用...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/05/25/%E3%80%8ASpark-HA-Yarn%E9%85%8D%E7%BD%AE%E3%80%8B/'>
-          <p class='title'>《Spark HA & Yarn配置》<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>一、Spark（HA）1.上传apache-zookeeper-3.7.0-bin.tar.gz 到&#x2F;export&#x2F;servers&#x2F;目录下 并解压文件 
-2.在 &...</p>
+        <a class='next' href='/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/'>
+          <p class='title'>《Kafka环境配置》<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>一、Kafka环境配置
+上传安装包（移动到指定文件夹&#x2F;export&#x2F;servers）
+
+mv kafka_2.11-2.0.0.tgz &#x2F;export&#x2F;s...</p>
         </a>
       
     </div>
@@ -2807,7 +2819,7 @@ kafka-console-consumer.sh
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2840,7 +2852,7 @@ kafka-console-consumer.sh
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">一、Kafka环境配置</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="toc-text">一、Kafka命令行操作</span></a></li></ol>
     </div>
   </section>
 
@@ -3912,7 +3924,7 @@ kafka-console-consumer.sh
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Young fearless,long years,can be wanton high"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/06/05/《Kafka环境配置》/","name":"《Kafka环境配置》"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"Young fearless,long years,can be wanton high","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Young fearless,long years,can be wanton high"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"《Kafka环境配置》","description":"Young fearless,long years,can be wanton high","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/06/05/%E3%80%8AKafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%8B/","wordCount":0,"datePublished":"2022-06-05T06:02:41.000Z","dateModified":"2022-06-05T07:22:39.471Z","keywords":"《Kafka环境配置》","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Young fearless,long years,can be wanton high"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/06/05/《Kafka命令行操作》/","name":"《Kafka命令行操作》"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"Young fearless,long years,can be wanton high","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Young fearless,long years,can be wanton high"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"《Kafka命令行操作》","description":"Young fearless,long years,can be wanton high","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/06/05/%E3%80%8AKafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C%E3%80%8B/","wordCount":0,"datePublished":"2022-06-05T07:29:28.000Z","dateModified":"2022-06-05T07:51:04.978Z","keywords":"《Kafka命令行操作》","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
